@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Hotel Reservation Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #d4d4d4;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #c41e3a;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .form-table {
+            width: 100%;
+            border: 2px solid #2c5f8d;
+            border-collapse: collapse;
+        }
+
+        .form-table tr {
+            border: 1px solid #2c5f8d;
+        }
+
+        .form-table td {
+            padding: 12px;
+            border: 1px solid #2c5f8d;
+        }
+
+        .form-table td:first-child {
+            background-color: #a8c8e1;
+            font-weight: bold;
+            width: 40%;
+            color: #000;
+        }
+
+        .form-table td:last-child {
+            background-color: #a8c8e1;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="time"],
+        input[type="date"] {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .radio-item,
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .submit-row {
+            text-align: center;
+        }
+
+        button {
+            background-color: #a8c8e1;
+            border: 2px solid #2c5f8d;
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #000;
+        }
+
+        button:hover {
+            background-color: #8fb5d6;
+        }
+
+        button:active {
+            background-color: #7a9ec4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Continental Hotel Reservation Form</h1>
+       
+        <form>
+            <table class="form-table">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td>eMail</td>
+                    <td><input type="email" value="info@continental.pk" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td><input type="text" placeholder="Enter your cell number" required></td>
+                </tr>
+                <tr>
+                    <td>Arrival Time</td>
+                    <td><input type="time" placeholder="Enter your arrival time"></td>
+                </tr>
+                <tr>
+                    <td>Departure</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Room Type</td>
+                    <td>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="roomType" value="single">
+                                Single
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="roomType" value="double">
+                                Double
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="roomType" value="presidential">
+                                Presidential Suite
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Preferences</td>
+                    <td>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="preferences" value="nonSmoking">
+                                Non-Smoking
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="preferences" value="internet">
+                                Internet
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="preferences" value="firmMattress">
+                                Firm Mattress
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mode of Payment</td>
+                    <td>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="payment" value="cash">
+                                Cash
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="payment" value="check">
+                                Check
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="payment" value="creditCard">
+                                Credit Card
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="payment" value="selectCard">
+                                Select Card
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-row">
+                        <button type="submit">Send Data</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
